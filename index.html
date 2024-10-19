@@ -43,26 +43,26 @@
   <header>
     <nav>
       <a href="/" id="/" class="hide">
-        <p>Home</p>
+        <p>بيت</p>
       </a>
       <a href="/upcoming" id="/upcoming">
         <i class="ri-skip-forward-line"></i>
-        <p>Upcoming</p>
+        <p>قادم</p>
       </a>
       <a href="/search" id="/search">
         <i class="ri-search-2-line"></i>
-        <p>Search</p>
+        <p>بحث</p>
       </a>
-      <a href="/library" id="/library">
+      <!--a href="/library" id="/library">
         <i class="ri-stack-line"></i>
-        <p>Library</p>
-      </a>
+        <p>مكتبة</p>
+      </a-->
       <a href="/settings" id="/settings">
         <i class="ri-settings-line"></i>
-        <p>Settings</p>
+        <p>الإعدادات</p>
       </a>
       <a href="/list" id="/list" class="hide">
-        <p>list</p>
+        <p>قائمة</p>
       </a>
     </nav>
     <div id="miniPlayer">
@@ -70,8 +70,8 @@
       <div id="mp">
 
         <div id="mptext">
-          <a id="title" href="" target="_blank">Now Playing</a>
-          <p id="author">Channel</p>
+          <a id="title" href="" target="_blank">يلعب الآن</a>
+          <p id="author">قناة</p>
         </div>
 
         <button class="ri-stop-circle-fill" id="playButton" aria-label="play" data-playbackState="none"></button>
@@ -87,7 +87,7 @@
         <article id="subtitleContainer" class="hide">
         </article>
         <select id="subtitleSelector" class="hide">
-          <option>Subtitles</option>
+          <option>عناوين فرعية</option>
         </select>
         <!-- image -->
         <div id="meta">
@@ -143,7 +143,7 @@
           <option value="4.00">4.00x</option>
         </select>
         <select id="bitrateSelector">
-          <option>Bitrate</option>
+          <option>معدل البت</option>
         </select>
         <svg id="ytifyIcon" xmlns="http://www.w3.org/2000/svg" version="1.0" viewBox="0 0 4172 4172" width="1.5rem"
           height="1.5rem" style="transform: scale(1.5);overflow:hidden;">
@@ -159,24 +159,24 @@
     <section id="upcoming">
       <span id="queuetools">
         <button>
-          <i class="ri-close-line"></i> Clear
+          <i class="ri-close-line"></i> صاف
         </button>
         <button>
-          <i class="ri-shuffle-line"></i> Shuffle
+          <i class="ri-shuffle-line"></i> خلط
         </button>
         <button>
-          <i class="ri-subtract-line"></i> Remove
+          <i class="ri-subtract-line"></i> نزع
         </button>
         <button>
-          <i class="ri-filter-2-line"></i> Filter &lt;10:00
+          <i class="ri-filter-2-line"></i> فلتر &lt;10:00
         </button>
         <button>
-          <i class="ri-list-check-2"></i> Enqueue Related Streams
+          <i class="ri-list-check-2"></i> قائمة  الانتظار ذات الصلة
         </button>
       </span>
       <br>
       <div id="queuelist">
-        <h1>upcoming streams show here</h1>
+        <h1>تظهر التدفقات القادمة هنا</h1>
       </div>
     </section>
 
@@ -188,9 +188,9 @@
         <select id="searchFilters">
           <optgroup label="YouTube">
             <option value="all">All</option>
-            <option value="videos">Videos</option>
-            <option value="channels">Channels</option>
-            <option value="playlists">Playlists</option>
+            <option value="videos">فيديوهات</option>
+            <option value="channels">القنوات</option>
+            <option value="playlists">قوائم التشغيل</option>
           </optgroup>
           <optgroup label="YouTube Music">
             <option value="music_songs">Songs</option>
@@ -219,26 +219,23 @@
           display:block;
           backdrop-filter: blur(2px);
           ">
-            Welcome to ytify, a fast, lightweight, personalisable, minimal and free audio streaming platform. Learn more
-            about how to use
-            the WebApp effectively, <a href="https://github.com/n-ce/ytify/wiki/usage"
+            مرحبًا بك في mytify، وهي منصة بث صوتي سريعة وخفيفة الوزن وقابلة للتخصيص وبسيطة ومجانية. تعرف على المزيد
+            حول كيفية استخدام
+            تطبيق الويب بشكل فعال،<a href="https://github.com/n-ce/ytify/wiki/usage"
               style="text-decoration: underline;" target="_blank">here</a>.
           </b>
         </p>
         <p
           style="background: linear-gradient(to bottom right,#7706,#7709);border-radius:var(--roundness);font-size:large;padding:5vmin;box-shadow:var(--shadow);margin:5% 0">
-          To get stream data at the earliest, it will be requested from all available sources concurrently and may take
-          some time to start playing.
+          للحصول على بيانات البث في أقرب وقت ممكن ، سيتم طلبها من جميع المصادر المتاحة بشكل متزامن وقد تستغرق بعض الوقت لبدء اللعب.
         </p>
         <p
           style="background: linear-gradient(to bottom right,#6626,#6629);border-radius:var(--roundness);font-size:large;padding:5vmin;box-shadow:var(--shadow);margin:5% 0">
-          You can use a <b>Custom Instance</b> to circumvent the start time and turn off <b>Proxy Audio over
-            Invidious</b> if you
-          observe any continuous loading.
+          يمكنك استخدام أ <b>مثيل مخصص</b> للتحايل على وقت البدء والإيقاف <b>صوت الوكيل على Invidious</b> إذا لاحظت أي تحميل مستمر.
         </p>
         <p
           style="background: linear-gradient(to bottom right,#0776,#0779);border-radius:var(--roundness);font-size:large;padding:5vmin;box-shadow:var(--shadow);margin:5% 0">
-          On IOS the stream duration can be incorrect, it can be fixed by enabling <b>HTTP Live Streaming</b>.</p>
+          في iOS ، يمكن أن تكون مدة البث غير صحيحة ، ويمكن إصلاحها عن طريق التمكين<b>HTTP البث المباشر</b>.</p>
       </div>
     </section>
 
@@ -280,7 +277,7 @@
         <label for="r.channels">Channels</label>
 
         <input type="radio" id="r.feed" name="superCollectionChips" value="feed">
-        <label for="r.feed">Subscription Feed</label>
+        <label for="r.feed">موجز الاشتراك</label>
       </div>
 
       <div id="superCollectionList"></div>
@@ -309,11 +306,11 @@
 
           <button id="clearCacheBtn" type="button">Clear Caches</button>
 
-          <button id="restoreSettingsBtn" type="button">Restore Settings</button>
+          <button id="restoreSettingsBtn" type="button">استعادة الإعدادات</button>
 
-          <button id="exportSettingsBtn" type="button">Export Settings</button>
+          <button id="exportSettingsBtn" type="button">إعدادات التصدير</button>
           <button type="button">
-            <label for="importSettingsBtn">Import Settings</label>
+            <label for="importSettingsBtn">إعدادات الاستيراد</label>
             <input type="file" id="importSettingsBtn" class="hide">
           </button>
 
@@ -336,10 +333,10 @@
           <i class="ri-play-large-line"></i> Play
         </button>
         <button id="enqueueAllBtn">
-          <i class="ri-list-check-2"></i> Enqueue
+          <i class="ri-list-check-2"></i> قائمة الانتظار
         </button>
         <button id="importListBtn">
-          <i class="ri-import-line"></i> Import
+          <i class="ri-import-line"></i> استيراد
         </button>
         <button id="subscribeListBtn">
           <i class="ri-stack-line" data-state=" Subscribe"></i>
@@ -348,25 +345,25 @@
           <i class="ri-external-link-line" data-state=" View on YouTube"></i>
         </button>
         <button id="clearListBtn">
-          <i class="ri-close-line"></i> Clear All
+          <i class="ri-close-line"></i> مسح الكل
         </button>
         <button id="removeFromListBtn">
-          <i class="ri-subtract-line"></i> Remove
+          <i class="ri-subtract-line"></i> نزع
         </button>
         <button id="deleteCollectionBtn">
-          <i class="ri-delete-bin-2-line"></i> Delete
+          <i class="ri-delete-bin-2-line"></i> حذف
         </button>
         <button id="renameCollectionBtn">
-          <i class="ri-edit-line"></i> Rename
+          <i class="ri-edit-line"></i> تسمية جديدة
         </button>
         <button id="shareCollectionBtn">
-          <i class="ri-link"></i> Share
+          <i class="ri-link"></i> حصة
         </button>
 
       </span>
       <br>
       <div id="playlist">
-        <h1>playlist, channel or your collection items show here</h1>
+        <h1>قائمة التشغيل أو القناة أو عناصر المجموعة الخاصة بك تظهر هنا</h1>
       </div>
     </section>
 
